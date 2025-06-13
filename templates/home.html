@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usama Ibrahim | Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+
+        <h1 class="text-primary">Hi, I'm Usama Ibrahim 👋</h1>
+        <p>I’m a backend developer with Python and Django, passionate about building real-world web apps.</p>
+
+        <h2 class="mt-4">Skills</h2>
+        <ul>
+            <li>Django</li>
+            <li>Python</li>
+            <li>HTML, CSS, Bootstrap</li>
+            <li>Git & GitHub</li>
+        </ul>
+
+        <h2 class="mt-4">Projects</h2>
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    {% if project.image %}
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <p class="card-text">{{ project.description|truncatewords:20 }}</p>
+                        <a href="{{ project.github_link }}" target="_blank" class="btn btn-outline-dark btn-sm">GitHub</a>
+                        {% if project.live_demo_link %}
+                        <a href="{{ project.live_demo_link }}" target="_blank" class="btn btn-outline-success btn-sm">Live Demo</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if resume %}
+        <h2 class="mt-4">Resume</h2>
+        <a href="{{ resume.file.url }}" class="btn btn-primary" download>📄 Download Resume</a>
+        {% endif %}
+
+        <div class="mt-4">
+            <a href="{% url 'contact' %}" class="btn btn-secondary">Contact Me</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+Usama Ibrahim
+
+📍 Kaduna, Nigeria
+📞 +234-8131081089
+📧 usamaibrahim737@gmaiil.com.com
+💻 GitHub: github.com/Usermah
+🌐 Portfolio: your-portfolio-link.com
+
+
+🎯 Professional Summary
+
+Highly motivated Backend Developer with strong expertise in Python and Django, specializing in building robust, scalable, and user-focused web applications. Proven experience in RESTful API development, session-based e-commerce, and full-featured CMS apps. Passionate about learning, clean code, and delivering real-world solutions.
+
+💼 Technical Skills
+
+    Languages: Python, JavaScript, HTML, CSS, SQL
+
+    Frameworks: Django, Bootstrap
+
+    Databases: PostgreSQL, SQLite, MySQL
+
+    Tools: Git, GitHub, Linux, Render, VS Code
+
+    Others: REST APIs, File Uploads, Admin Customization, SMTP Integration, Authentication
+   
+🧠 Projects
+✅ Django To-Do List App
+
+    Built a full-featured task manager with user login/logout, CRUD operations, and task filtering
+
+    Technologies: Django, Bootstrap, SQLite
+
+✅ Django Blog Website
+
+    Created a blog with comment & like system, admin publishing, and dynamic post filtering
+
+    Integrated a contact form that sends admin email on new user-submitted stories
+
+✅ E-commerce Store (Pure Water Delivery)
+
+    Developed an e-commerce app for selling pure water with a checkout form and session-based cart
+
+    Admin panel allows order tracking, price management, and customer location storage
+
+🎓 Education
+🎓 B.Sc. Computer Science (First Class Honours)
+
+Ahmadu Bello University, Zaria
+Expected Graduation: 2026
+🎓 National Diploma in Computer Science (Distinction)
+
+IAIICT ABU zaria
+Graduated: 2023
+
+
+🏆 Certifications
+
+    Python for Web Development – Coursera (2024)
+
+    Git & GitHub for Developers – Udemy (2023)
+    
+💬 Languages
+
+    English (Fluent)
+
+    Hausa (Native)
