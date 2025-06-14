@@ -5,16 +5,12 @@ from .models import Project, Resume
 from .forms import ContactForm
 
 
-
-
-# Home page showing bio, skills, and project list
 def home(request):
     projects = Project.objects.all().order_by('-created_at')
-    resume = Resume.objects.first()  # assuming only one resume
+    resume = Resume.objects.first()  
     return render(request, 'home.html', {'projects': projects, 'resume': resume})
 
 
-# Contact form view
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -31,7 +27,7 @@ def contact(request):
             full_message = f"Message from {name} <{email}>:\n\n{message}"
 
             try:
-                send_mail(subject, full_message, email, ['usamaibrahim737@gmail.com'])  # replace with your email
+                send_mail(subject, full_message, email, ['usamaibrahim737@gmail.com']) 
                 messages.success(request, "Message sent successfully!")
             except:
                 messages.error(request, "Failed to send email. Please try again later.")
