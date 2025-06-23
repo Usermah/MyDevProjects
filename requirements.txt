@@ -49,6 +49,7 @@ Flask-Security-Too==5.5.2
 Flask-SocketIO==5.5.1
 Flask-SQLAlchemy==3.1.1
 Flask-WTF==1.2.2
+git-filter-repo==2.47.0
 google-api-core==2.24.2
 google-api-python-client==2.169.0
 google-auth==2.40.2
@@ -114,12 +115,14 @@ qrcode==8.2
 redis==6.2.0
 requests==2.32.3
 requests-oauthlib==2.0.0
+resend==2.10.0
 rich==14.0.0
 rsa==4.9.1
 s3transfer==0.11.3
 SecretStorage==3.3.3
 setuptools==75.9.1
 shellingham==1.5.4
+sib-api-v3-sdk==7.6.0
 simple-websocket==1.1.0
 six==1.17.0
 speaklater3==1.4
