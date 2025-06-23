@@ -1,9 +1,16 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', sans-serif, Tahoma, Geneva, Verdana;
     background: #f8f9fa;
     color: #333;
 }
 .card {
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden; /* still works since zoom-image is wrapped properly */
+}
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+h1, h2 {
+    font-weight: 700;
 }

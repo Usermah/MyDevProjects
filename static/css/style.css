@@ -5,14 +5,12 @@ body {
 }
 .card {
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden; /* still works since zoom-image is wrapped properly */
 }
-
-h1, h2 {
-    font-weight: 700;
-}
-
 .card-title {
     font-size: 1.2rem;
     font-weight: 600;
+}
+h1, h2 {
+    font-weight: 700;
 }

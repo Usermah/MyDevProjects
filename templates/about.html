@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me | Usama{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10" data-aos="zoom-in">
+      <div class="card shadow-sm border-0">
+        
+      <div class="text-center py-3">
+  <img src="{% static 'usama.jpg' %}"
+       class="rounded-circle img-fluid"
+       alt="Usama"
+       style="max-width: 250px; height: auto;">
+</div>
+
+
+        <div class="card-body">
+          <h3 class="card-title text-primary fw-bold">Usama Ibrahim</h3>
+          <p class="card-text text-muted" style="line-height: 1.8;">
+            I’m a <strong>400-level Computer Science student</strong> at Ahmadu Bello University, Zaria.<br>
+            A passionate and skilled <strong>Full-Stack Developer</strong> and <strong>Cybersecurity Specialist</strong>.
+            <br><br>
+
+            🔐 <strong>Cybersecurity:</strong> I specialize in ethical hacking, penetration testing, and security auditing.<br>
+            🔧 <strong>Backend Development:</strong> I build secure, scalable APIs using Django and Django REST Framework.<br>
+            🌐 <strong>Web Technologies:</strong> Proficient in Python, JavaScript, HTML, CSS, Bootstrap, Git, and PostgreSQL.<br>
+            🚀 <strong>Deployment:</strong> Experienced with platforms like Render, Railway, and Vercel.<br><br>
+
+            I’m passionate about solving real-world problems, securing applications, and building production-ready web solutions.
+          </p>
+
+          <h5 class="mt-4 fw-bold">Skills:</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge bg-dark">Python</span>
+            <span class="badge bg-success">Django</span>
+            <span class="badge bg-info text-dark">REST APIs</span>
+            <span class="badge bg-primary">JavaScript</span>
+            <span class="badge bg-secondary">Git</span>
+            <span class="badge bg-warning text-dark">HTML/CSS</span>
+            <span class="badge bg-danger">Penetration Testing</span>
+            <span class="badge bg-primary">Linux (Kali)</span>
+            <span class="badge bg-dark">SQL/PostgreSQL</span>
+            <span class="badge bg-success">Bootstrap</span>
+          </div>
+
+          <div class="d-flex gap-2 flex-wrap mt-4">
+            <a href="mailto:usamaibrahim737@gmail.com" class="btn btn-outline-success btn-sm">📧 Email</a>
+            <a href="https://github.com/Usermah" class="btn btn-outline-dark btn-sm" target="_blank">💻 GitHub</a>
+            <a href="https://www.linkedin.com/" class="btn btn-outline-primary btn-sm" target="_blank">🔗 LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Zoom effect -->
+<style>
+  .zoom-image:hover {
+    transform: scale(1.06);
+  }
+</style>
+{% endblock %}
