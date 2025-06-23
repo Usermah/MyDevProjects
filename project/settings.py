@@ -47,8 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 
-    'cloudinary',
-    'cloudinary_storage',
+    
   ]
 
 SITE_ID = 1
@@ -162,12 +161,10 @@ load_dotenv()
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
-
-
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
-
+INSTALLED_APPS += [
+    'cloudinary',
+    'cloudinary_storage',
+]
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
