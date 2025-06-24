@@ -1,5 +1,6 @@
 <!-- templates/home.html -->
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Portfolio | Usama{% endblock %}
 {% block content %}
 
@@ -72,6 +73,17 @@
     <a href="{{ resume.file.url }}" class="btn btn-primary btn-lg mt-2" download>📄 Download Resume</a>
 </section>
 {% endif %}
+
+
+
+
+<section class="mt-5 text-center">
+    <h2>Resume</h2>
+    <a href="{% static 'resumes/Usama_Ibrahim.pdf' %}" class="btn btn-primary btn-lg mt-2" download>
+        📄 Download Resume
+    </a>
+</section>
+
 
 <!-- Contact Button
 <div class="text-center mt-5">
