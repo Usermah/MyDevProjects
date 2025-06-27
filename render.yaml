@@ -1,13 +1,15 @@
 services:
   - type: web
-    name: app
-    plan: free
+    name: portfolio-app
     env: docker
-    dockerfilePath: Dockerfile
+    plan: free
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: DEBUG
         value: False
       - key: ALLOWED_HOSTS
-        value: portpolio.onrender.com
+        value: mydevprojects.onrender.com
       - key: EMAIL_HOST_USER
         value: usamaibrahim737@gmail.com
+      - key: EMAIL_HOST_PASSWORD
+        sync: false

@@ -1,28 +1,29 @@
-# Use official Python image
+# Start with a base image
 FROM python:3.10-slim
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-
-# Set work directory
+# Set working directory
 WORKDIR /app
 
-# Install system dependencies
+# Install system-level dependencies needed for pip packages
 RUN apt-get update && apt-get install -y \
-    libpq-dev gcc \
+    gcc \
+    libpq-dev \
+    libkrb5-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies
+# Copy requirement files and install dependencies
 COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Copy project
+# Copy project files
 COPY . .
 
-# Collect static files
+# Collect static files (optional)
 RUN python manage.py collectstatic --noinput
 
-# Run the app
+# Set the port for gunicorn to run
+EXPOSE 8000
+
+# Start the Django app with Gunicorn
 CMD ["gunicorn", "project.wsgi:application", "--bind", "0.0.0.0:8000"]
