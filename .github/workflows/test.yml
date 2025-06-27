@@ -1,0 +1,31 @@
+name: My portfolio application
+
+
+on:
+  push:
+    branches: [main]
+
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      -name: checkout code
+      uses: actions/checkout@v3
+
+
+      -name: set up  python
+      uses: actions/setup-python@v4
+      with:
+          python-version: '3.10'
+
+      
+      -name: install dependency
+      run: |
+          python manage.py test
+
+      -name: Deploy to Render via Deploy Hook
+      run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}

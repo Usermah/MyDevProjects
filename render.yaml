@@ -1,19 +1,13 @@
 services:
   - type: web
     name: app
-    env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt"
-    python manage.py collectstatic --noinput
-    startCommand: "gunicorn your_project_name.wsgi:application"
+    env: docker
+    dockerfilePath: Dockerfile
     envVars:
-      - key: DJANGO_SECRET_KEY
-        value: django-insecure-n4ie1wvp1d-xe2%ss=2qr)-3wbayv5&1@f-tm@b8+@+0q4g@#8
       - key: DEBUG
         value: False
       - key: ALLOWED_HOSTS
         value: portpolio.onrender.com
       - key: EMAIL_HOST_USER
         value: usamaibrahim737@gmail.com
-      - key: EMAIL_HOST_PASSWORD
-        value: uiamtlpcqgaqgnqi
